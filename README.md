@@ -8,77 +8,50 @@ LocaleSync adds missing keys, removes obsolete non-plural keys and handles store
 
 LocaleSync requires Node.js 22.12 or later.
 
-Install it in your Shopify theme:
-
-```bash
-npm install --save-dev @conducivemammal/shopify-locale-sync
-```
-
-Add these scripts to the theme's `package.json`:
-
-```json
-{
-  "scripts": {
-    "locales:check": "localesync check",
-    "locales:sync": "localesync sync",
-    "locales:reset": "localesync reset"
-  }
-}
-```
-
-Alternatively, install LocaleSync as a Shopify CLI 4 plugin:
+Install LocaleSync once as a Shopify CLI 4 plugin. The commands will then be available from any Shopify theme:
 
 ```bash
 shopify plugins install @conducivemammal/shopify-locale-sync
 ```
 
-Installing the npm dependency does not register the Shopify CLI commands. Choose the installation method that matches how you want to run LocaleSync.
+Shopify CLI manages the plugin installation at the user level, so it does not need to be added to each theme's dependencies.
 
 ## Usage
 
 Check a theme before changing any files:
 
 ```bash
-npm run locales:check
+shopify theme locales check
 ```
 
 > [!IMPORTANT]
 > A sync adds missing keys and removes obsolete non-plural keys. Preview the result before the first write.
 
 ```bash
-npm run locales:sync -- --dry-run
-npm run locales:sync
+shopify theme locales sync --dry-run
+shopify theme locales sync
 ```
 
 Restore every changed locale file to its state before the first sync:
 
 ```bash
-npm run locales:reset
-```
-
-Pass additional options after `--`:
-
-```bash
-# Fail CI when differences are found
-npm run locales:check -- --fail-on-differences
-
-# Use another theme and return JSON
-npm run locales:check -- --path ./themes/example --json
-
-# Export the report
-npm run locales:check -- --export ./reports/locales-check.log
-```
-
-The equivalent Shopify CLI commands are:
-
-```bash
-shopify theme locales check
-shopify theme locales sync --dry-run
-shopify theme locales sync
 shopify theme locales reset
 ```
 
-Run `npm exec -- localesync --help` for the complete command reference.
+Pass additional options directly to the Shopify CLI command:
+
+```bash
+# Fail CI when differences are found
+shopify theme locales check --fail-on-differences
+
+# Use another theme and return JSON
+shopify theme locales check --path ./themes/example --json
+
+# Export the report
+shopify theme locales check --export ./reports/locales-check.log
+```
+
+Append `--help` to a command for its complete reference, for example `shopify theme locales check --help`.
 
 ## Behaviour
 
