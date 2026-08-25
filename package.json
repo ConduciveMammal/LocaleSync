@@ -1,6 +1,6 @@
 {
-  "name": "localesync",
-  "version": "0.0.0",
+  "name": "@conducivemammal/shopify-locale-sync",
+  "version": "0.1.0",
   "description": "Keep Shopify theme locale files structurally in sync.",
   "keywords": [
     "shopify",
@@ -19,7 +19,7 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "localesync": "./bin/localesync.js"
+    "localesync": "bin/localesync.js"
   },
   "files": [
     "/bin",
