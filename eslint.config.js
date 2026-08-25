@@ -1,0 +1,37 @@
+import eslint from '@eslint/js'
+import tseslint from 'typescript-eslint'
+
+export default tseslint.config(
+  {
+    ignores: ['dist', 'node_modules', 'oclif.manifest.json'],
+  },
+  {
+    files: ['src/**/*.ts', 'test/**/*.ts'],
+    extends: [eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    rules: {
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/no-confusing-void-expression': 'off',
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        {
+          checksVoidReturn: false,
+        },
+      ],
+    },
+  },
+  {
+    files: ['*.js', 'bin/*.js'],
+    extends: [eslint.configs.recommended],
+    languageOptions: {
+      globals: {
+        process: 'readonly',
+      },
+    },
+  },
+)

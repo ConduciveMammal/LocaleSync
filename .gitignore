@@ -1,0 +1,9 @@
+dist/
+node_modules/
+oclif.manifest.json
+*.tgz
+.DS_Store
+.env
+.env.*
+!.env.example
+coverage/

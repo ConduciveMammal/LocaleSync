@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "product": {
+      "name": "Product"
+    }
+  },
+  "settings": {
+    "heading": {
+      "label": "Heading"
+    }
+  }
+}

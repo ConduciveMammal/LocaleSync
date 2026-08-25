@@ -1,0 +1,29 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Saltar al contenido",
+      "close": "Cerrar"
+    }
+  },
+  "header": {
+    "search": {
+      "placeholder": "Buscar productos",
+      "submit": "Search"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Tu cesta",
+      "empty": "Your basket is empty"
+    },
+    "item_count": {
+      "one": "{{ count }} artículo"
+    }
+  },
+  "product": {
+    "form": {
+      "sold_out_2": "Sold sdlfjhsdlfsdfl",
+      "add_to_cart": "Add to basket"
+    }
+  }
+}

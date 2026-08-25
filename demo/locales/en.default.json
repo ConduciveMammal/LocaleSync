@@ -1,0 +1,30 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close": "Close"
+    }
+  },
+  "header": {
+    "search": {
+      "placeholder": "Search products",
+      "submit": "Search"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Your basket",
+      "empty": "Your basket is empty"
+    },
+    "item_count": {
+      "one": "{{ count }} item",
+      "other": "{{ count }} items"
+    }
+  },
+  "product": {
+    "form": {
+      "sold_out_2": "Sold sdlfjhsdlfsdfl",
+      "add_to_cart": "Add to basket",
+    }
+  }
+}

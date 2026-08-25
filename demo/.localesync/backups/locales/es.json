@@ -1,0 +1,21 @@
+{
+  "general": {
+    "accessibility": {
+      "skip_to_content": "Saltar al contenido",
+      "close": "Cerrar"
+    }
+  },
+  "header": {
+    "search": {
+      "placeholder": "Buscar productos"
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "Tu cesta"
+    },
+    "item_count": {
+      "one": "{{ count }} artículo"
+    }
+  }
+}
