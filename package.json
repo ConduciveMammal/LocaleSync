@@ -1,6 +1,6 @@
 {
   "name": "@conducivemammal/shopify-locale-sync",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Keep Shopify theme locale files structurally in sync.",
   "repository": {
     "type": "git",
